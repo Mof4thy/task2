@@ -1,0 +1,557 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+font-family:sans-serif;
+background-color:#47818b22;
+/* background-color:#d6d6d6; */
+}
+
+/*//////////////////       HEADER     //////////////////*/
+
+.header_sec{
+width: 80%;
+margin: auto;
+padding: 30px 0 ;
+}
+.header_sec_container{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.header_logo{
+flex: 1;
+}
+.header_logo img{
+width: 185px;
+height: 45px;
+margin-top: 10px;
+}
+.header_list{
+flex: 3;
+}
+.header_list ul li{
+display: inline-block;
+padding: 8px 18px;
+font-size: 16px;
+position: relative;
+text-transform: capitalize;
+}
+.header_list ul li a{
+text-decoration: none;
+color: #16588E;
+}
+.header_icons{
+flex: 1;
+text-align: right;
+}
+.header_icons ul {
+list-style: none;
+}
+.header_icons ul li{
+display: inline-block;
+font-size: 28px;
+padding: 10px;
+text-align: right;
+color: #333333;
+}
+.header_icons ul li span{
+font-size: 20px;
+margin-left: 12px;
+}
+.cart{
+position: relative;
+}
+.cart_count{
+position: absolute;
+width: 15px;
+height: 25px;
+background-color: #81C4FF;
+color: #000000;
+
+text-align: center;
+line-height: 25px;
+border-radius:50% ;
+font-size: 15px;
+top: 30px;
+left:43px;
+}
+
+.header_list ul li::before{
+position: absolute;
+content: "";
+top: 0;
+left: 0;
+width: 96%;
+height: 109%;
+border-width: 0px 2px ;
+border-color: #16588E;
+border-style:solid ;
+transform: scale(1,0);
+transition: 0.2s;
+}
+.header_list ul li::after{
+position: absolute;
+content: "";
+top: 0;
+left: 0;
+width: 99%;
+height: 99%;
+border-width: 2px 0px ;
+border-color: #16588E;
+border-style:solid ;
+transform-origin: left;   
+transform: scalex(0);
+transition: 0.3s;
+}
+.header_list ul li:hover::before{
+    transform: scalex(1);
+    cursor: pointer;
+}
+.header_list ul li:hover:after{
+transform: scale(1,1);
+transition-delay:0.22s;
+cursor: pointer;
+}
+.drop_down_li{
+position: relative;
+}
+.drop_down_table{
+position: absolute;
+z-index: 5;
+top: 40px;
+left: 0;
+visibility: hidden;
+opacity: 0;
+transition: 0.5s;
+transform: scale(0,0);
+}
+.header_table{  
+border: 2px solid #16588E;
+width: 450px;
+height: 160px;
+padding: 10px;
+background-color: #a3d3fd;
+font-size: 16px;
+}
+.header_table th{
+text-align: left;
+padding-bottom:10px ;
+}
+.header_table th span{
+padding-bottom: 3px;
+border-bottom: 1px dotted;
+}
+.header_table td{
+padding: 2px 0px; 
+}
+.drop_down_li:hover .drop_down_table{
+
+visibility: visible;
+opacity: 1;
+transform: scale(1,1);
+}
+
+/* ////////////////home page///////////////////// */
+
+.home_page_sec{
+width: 80%;
+height: 600px;
+margin: auto;
+margin-bottom: 40px;
+padding: 80px 80px ;
+background-image: url(../Images/homeimg.webp);
+background-size: cover;
+background-position: center;
+border-radius: 50px;
+}
+.home_page_title{
+font-size: 80px;
+color:#000000;
+}
+.hone_page_button{
+width: 120px;
+height: 30px;
+background-color:  #81C4FF;
+color: #000000;
+border: none;
+font-size: 15px;
+margin-top: 50px;
+transition: 0.2s;
+border-radius: 50px;
+}
+.hone_page_button:hover{
+background-color:  #16588E;
+color: #d3d3d3;
+cursor: pointer;
+}
+
+/*/////////////     GLOBAL   ///////////////*/
+
+
+.container{
+padding: 40px 0;
+width: 80%;
+margin: auto;
+}
+.sec_title h2{
+text-align: center;
+font-size: 40px;
+text-transform: capitalize;
+padding-bottom: 10px;
+color: #16588E;
+}
+.title_underline{
+width: 100px;
+height: 3px;
+border-radius: 20px;
+margin: auto;
+transition: 0.5s;
+background-color: #50adff;  
+}
+.sec_title:hover .title_underline{
+transform: scale(1.8,1);
+}
+/*///////////////////Special category/////////////////////////*/
+
+.Special_category_sec{
+width: 100%;
+}
+.Special_category_container{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+.Special_items_box{
+margin-top: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+flex-direction: row-reverse;
+}
+.Special_item{
+width: 24%;
+}   
+.Special_item_img{
+background-position: center;
+background-size: cover;
+width: 100%;
+height: 250px;
+margin: auto;
+border-radius: 10px;
+}
+.Special_item .img1{
+background-image: url(../Images/BMW-back-light.webp);
+background-position-x: -15px;
+
+}
+.Special_item .img2{
+background-image: url(../Images/BMW-surroundings_3to2.jpg);
+}
+.Special_item .img3{
+background-image: url(../Images/BMW-inter.webp);
+background-position-x: -10px;
+
+}
+.Special_item .img4{
+background-image: url(../Images/DI23_000192853_LSQ_0034_G22_MPA_BMW_Individual_Instrumententafel_lederbezogen_SA4M5_Retouched-updated_3to2.webp);
+}
+/* .Special_item_img img{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+} */
+.Special_item_desc{
+margin-top: 20px;   
+}
+.Special_item_mode{
+color: #16588E;
+text-transform: capitalize;
+font-size: 14px;
+font-weight: 600;
+}
+.Special_item_name{
+margin-top: 3px;
+font-size: 19px;
+font-weight: 700;
+color: #000000;
+text-transform: capitalize;
+}
+.Special_item_name_arrow{
+flex-wrap: wrap;
+display: flex;
+justify-content:space-between ;
+}
+.arrow{
+width: 30px;
+height: 30px;
+background-color: #81C4FF;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+visibility: hidden;
+opacity: 0;
+transition: 0.4s;
+border-radius: 10px;    
+}
+.arrow i{
+color: #16588E;
+/* color: white; */
+font-size: 25px;
+}
+.Special_item:hover .arrow{
+visibility: visible;
+opacity: 1;
+}
+/*////////////////////*/
+.offers{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 30px 0;
+}
+.description_box{
+flex: 2;
+padding: 20px;
+background-image:
+linear-gradient(to bottom, rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+url(../Images/m440i.jpg) ;
+background-size: cover;
+background-position: center;
+border-radius: 10px;
+}
+.offer_item{
+flex: 1;
+transition: 0.5s;
+border-radius: 10px;
+}
+.offer1{
+margin: 0 20px;
+background-image:
+linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)),
+url(../Images/BMW-MY25-DI23_000192885_LSQ_0009_G22_MPA_Dashboard_OS_8_0_v2-retouched-3_3to2.webp);
+background-size: cover;
+background-position: center;
+}
+.offer2{
+background-image:
+linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)),
+url(../Images/g82_g22-m440_dynamics_m-6cylinder-engine_fb-1_3to2.webp);
+background-size: cover;
+background-position: center;
+}
+.description_head{
+flex-wrap: wrap;
+display: flex;
+}
+.description_head i{
+font-size: 60px;
+color:#81C4FF;
+margin-right: 3px;
+}
+.description_title h4{
+font-size: 35px;
+text-transform: capitalize;
+color: #ffffffe8;
+}
+.description_title span{
+font-size: 16px;
+color: #ffffffc8;
+
+}
+.description{
+padding-right: 80px;
+}
+.description p{
+margin: 20px  0 50px 0;
+font-size: 17px;
+color: #d5d2d2;
+}
+.slashes{
+flex-wrap: wrap;
+display: flex;
+justify-content: flex-end;
+}
+.slashes .left{
+background-color: #81C4FF;
+}
+.slashes .mid{
+background-color: #16588E;
+margin: 0 6px;
+}
+.slashes .right{
+background-color: #E7222E;
+}
+.slashes span{
+width: 50px;
+height: 3px;
+/* background-color:#19A7CE; */
+text-align: right;
+}
+.slashes span:hover{
+background-color:#ffffff89;
+}
+.offer_item h3{
+font-size: 20px;
+text-transform: capitalize;
+font-weight: 800;
+color: #81C4FF;
+margin-left: 20px;
+margin-top: 20px;
+}
+.offer_item h4{
+font-size: 15px;
+text-transform: capitalize;
+font-weight: 800;
+color: #ffffffda;
+margin-left: 20px;
+}
+.offer_item:hover{
+transform: scale(1.1,1.1);
+}
+
+/*///////////////////////////////////////////////////////////////*/
+
+.icons_box{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding-bottom: 40px;
+border-bottom: 1px solid;
+}
+.icon_item{
+flex: 1;
+flex-wrap: wrap;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-right:1px solid black ;
+}
+.last{
+border: none;
+}
+.icon_slider{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+width: 80px;
+height: 70px;
+background-position: center;
+background-position-y:-10px;
+
+background-size: cover;
+transition: 0.4s;
+}
+.icon_slider1{
+    background-image: url(../Images/sprite/spritesheet\ \(5\).png);
+}
+.icon_slider2{
+    background-image: url(../Images/sprite/spritesheet\ \(1\).png);
+}
+.icon_slider3{
+    background-image: url(../Images/sprite/spritesheet\ \(2\).png);
+}
+.icon_slider4{
+    background-image: url(../Images/sprite/spritesheet\ \(3\).png);
+}
+.icon_slider5{
+    background-image: url(../Images/sprite/spritesheet\ \(4\).png);
+}
+.icon_name{
+font-size: 23px;
+text-transform: capitalize;
+}
+.icon_desc{
+font-size: 15px;
+font-weight: 100;
+color: #16588E;
+text-transform: capitalize;
+}
+.icon_slider:hover{
+background-position-y:-90px;
+
+}
+/*///////////////////////////////////////////////////////////////////////////*/
+
+.categories{
+width: 700px;
+flex-wrap: wrap;
+display: flex;
+justify-content: space-evenly;
+margin: auto;
+margin-top: 30px;
+margin-bottom: 10px;
+}
+.categories h4{
+font-size: 20px;
+color: #000000cc;
+}
+.card_container{
+flex-wrap: wrap;
+display: flex;
+justify-content: space-between;
+padding-top: 30px;
+}
+
+.card_item{
+width: 30%;
+position: relative;
+}
+.front_card{
+width: 100%;
+position: absolute;
+z-index: 1;
+backface-visibility: hidden;
+transform: scalex(0);
+transition: 0.2s;
+}
+
+.product_icons{
+    position: absolute;
+}
+
+.back_card{
+width: 100%;    
+}
+.back_card img{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+}
+.front_card img{
+width: 100%;
+height: 100%;
+opacity: 0.9;
+border-radius: 10px;
+}
+.card_item:hover .front_card{
+transform: scalex(1);
+}
+.card_item_desc{
+flex-wrap: wrap;
+display: flex;
+flex-direction: column;
+margin-top: 10px;
+}
+.stars i{
+color: #16588E;
+}
+.stars .laststar{
+color: #81C4FF;
+}
+.Product_name{
+font-size: 22px;
+font-weight: 700;
+margin: 5px 0;
+}
+.Product_price{
+font-size: 19px;
+font-weight: 600;
+color: #16588E;
+}
